@@ -31,9 +31,11 @@ export default function Hero() {
                         </p>
 
                         <div className="flex flex-col sm:flex-row gap-4 mb-10">
-                            <Button size="lg" className="bg-gold-500 hover:bg-gold-600 text-white text-lg px-8 font-playfair tracking-wide shadow-xl shadow-gold-500/20">
-                                Book Your Bespoke Consultation
-                            </Button>
+                            <a href="#contact">
+                                <Button size="lg" className="bg-gold-500 hover:bg-gold-600 text-white text-lg px-8 font-playfair tracking-wide shadow-xl shadow-gold-500/20">
+                                    Book Your Bespoke Consultation
+                                </Button>
+                            </a>
                         </div>
                     </motion.div>
 
@@ -46,8 +48,8 @@ export default function Hero() {
                     >
                         <div className="relative z-10 rounded-[2.5rem] overflow-hidden shadow-2xl border-[1px] border-gold-200 dark:border-brown-800">
                             <img
-                                src="https://images.unsplash.com/photo-1629851725515-f5b9d79ee664?q=80&w=1000&auto=format&fit=crop"
-                                alt="Smyluxe Patient"
+                                src="/images/hero-clinic.png"
+                                alt="Smyluxe Dental Clinic"
                                 className="w-full h-auto object-cover transform hover:scale-105 transition-transform duration-700"
                             />
 

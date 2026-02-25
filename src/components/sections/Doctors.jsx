@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 
-const DoctorCard = ({ name, role, image, delay }) => (
+const DoctorCard = ({ name, role, subRole, image, delay }) => (
     <motion.div
         initial={{ opacity: 0, scale: 0.9 }}
         whileInView={{ opacity: 1, scale: 1 }}
@@ -19,7 +19,7 @@ const DoctorCard = ({ name, role, image, delay }) => (
         <div className="p-6 text-center bg-white dark:bg-brown-900">
             <h3 className="text-2xl font-playfair font-bold text-brown-900 dark:text-gold-100 mb-2 text-gold-600 dark:text-gold-400">{name}</h3>
             <p className="text-brown-600 dark:text-cream-200 font-bold font-inter text-sm mb-1 uppercase tracking-wider">{role}</p>
-            {name.includes("Chhaya") && <p className="text-brown-500 dark:text-cream-300 font-medium font-inter text-sm">Implant Surgeon</p>}
+            {subRole && <p className="text-brown-500 dark:text-cream-300 font-medium font-inter text-sm uppercase tracking-wide">{subRole}</p>}
         </div>
     </motion.div>
 );
@@ -29,11 +29,13 @@ const Doctors = () => {
         {
             name: "Dr. Ketan Patil",
             role: "BDS, MUHS",
+            subRole: "General Dentist",
             image: "/images/doctors/dr-ketan.jpg?v=2"
         },
         {
             name: "Dr. Chhaya Patil",
             role: "MDS, MUHS",
+            subRole: "Implant Surgeon",
             image: "/images/doctors/dr-chhaya.jpg?v=2"
         }
     ];
@@ -41,6 +43,16 @@ const Doctors = () => {
     return (
         <section id="doctors" className="py-24 bg-[#FFFBF0] dark:bg-neutral-900">
             <div className="container mx-auto px-4">
+                <div className="text-center mb-16">
+                    <motion.h2
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        className="text-4xl md:text-5xl font-playfair font-bold text-gold-500 mb-6"
+                    >
+                        Our Expert Team
+                    </motion.h2>
+                </div>
                 <div className="flex flex-wrap justify-center gap-16">
                     {doctors.map((doc, index) => (
                         <div key={index} className="w-full md:w-1/3 max-w-sm">

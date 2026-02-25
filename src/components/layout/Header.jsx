@@ -63,11 +63,13 @@ export default function Header() {
                     <ThemeToggle />
                     <div className="hidden lg:flex items-center gap-2 text-brown-800 dark:text-cream-200">
                         <Phone size={18} className="text-gold-500" />
-                        <span className="font-semibold text-sm">+1 (555) 123-4567</span>
+                        <span className="font-semibold text-sm">+91 84118 61037</span>
                     </div>
-                    <Button className="bg-gold-500 hover:bg-gold-600 text-white font-playfair tracking-wide border-none">
-                        Book Appointment
-                    </Button>
+                    <a href="#contact">
+                        <Button className="bg-gold-500 hover:bg-gold-600 text-white font-playfair tracking-wide border-none">
+                            Book Appointment
+                        </Button>
+                    </a>
                 </div>
 
                 {/* Mobile Menu Toggle */}
@@ -103,7 +105,9 @@ export default function Header() {
                                 </a>
                             ))}
                             <div className="h-px bg-gold-200/50 my-2"></div>
-                            <Button className="w-full bg-gold-500 hover:bg-gold-600 text-white">Book Appointment</Button>
+                            <a href="#contact" onClick={() => setMobileMenuOpen(false)}>
+                                <Button className="w-full bg-gold-500 hover:bg-gold-600 text-white">Book Appointment</Button>
+                            </a>
                         </div>
                     </motion.div>
                 )}

@@ -23,8 +23,8 @@ export default {
                     900: '#3A2E0F', // Dark Text/Accents
                 },
                 dental: {
-                    teal: '#14B8A6',
-                    purple: '#9333EA',
+                    teal: '#2DD4BF', // Brighter Teal (Teal-400)
+                    purple: '#A855F7', // Brighter Purple (Purple-500)
                 }
             },
             fontFamily: {

@@ -87,7 +87,7 @@ const Services = () => {
             title: "Hollywood Whitening",
             shortDesc: "Achieve a dazzling, camera-ready smile with our advanced whitening systems.",
             fullDesc: "Our Hollywood Whitening treatment is a premium cosmetic procedure designed to lift deep stains and brighten your smile by multiple shades. Using the latest light-activated technology combined with medical-grade whitening agents, we ensure safety and spectacular results in just one session.",
-            image: "https://images.unsplash.com/photo-1598256989494-0813f3ae714c?q=80&w=1000&auto=format&fit=crop",
+            image: "/images/services/whitening.png",
             benefits: ["Instant Results", "Enamel Safe", "Long-lasting Brightness", "Custom Shade Selection"]
         },
         {
@@ -103,7 +103,7 @@ const Services = () => {
             title: "General Dentistry",
             shortDesc: "Comprehensive care for maintaining optimal oral health for the whole family.",
             fullDesc: "General dentistry covers a wide range of procedures fundamental to protecting and maintaining good oral health. From routine scaling and polishing to fillings and root canal treatments, our expert team ensures your teeth and gums stay healthy year-round.",
-            image: "https://images.unsplash.com/photo-1609840114035-3c981b782dfe?q=80&w=1000&auto=format&fit=crop",
+            image: "/images/services/general-dentistry.png",
             benefits: ["Preventative Care", "Early Detection", "Comprehensive Exams", "Gum Health Maintenance"]
         },
         {
@@ -111,7 +111,7 @@ const Services = () => {
             title: "Orthodontics",
             shortDesc: "Straighten your teeth with modern solutions like Invisalign and fast braces.",
             fullDesc: "Our orthodontic treatments correct teeth and jaws that are positioned improperly. Crooked teeth and teeth that do not fit together correctly are harder to keep clean and at risk of being lost early. We offer both traditional braces and clear aligners like Invisalign.",
-            image: "https://images.unsplash.com/photo-1598256989492-5eb50fced759?q=80&w=1000&auto=format&fit=crop",
+            image: "/images/services/orthodontics.png",
             benefits: ["Improved Bite", "Easier Cleaning", "Aesthetic Alignment", "Correction of Jaw Pain"]
         },
         {
@@ -119,7 +119,7 @@ const Services = () => {
             title: "Dental Implants",
             shortDesc: "The premier solution for missing teeth, offering permanence and stability.",
             fullDesc: "Dental implants provide a strong foundation for fixed (permanent) or removable replacement teeth that are made to match your natural teeth. They are the closest you can get to healthy, natural teeth, allowing you to eat, speak, smile, and laugh with confidence.",
-            image: "https://images.unsplash.com/photo-1629909615184-74f495363b63?q=80&w=1000&auto=format&fit=crop",
+            image: "/images/services/implants.png",
             benefits: ["Permanent Solution", "Bone Preservation", "Natural Function", "No Impact on Adjacent Teeth"]
         },
         {
@@ -127,7 +127,7 @@ const Services = () => {
             title: "Gum Care",
             shortDesc: "Specialized treatments to ensure the foundation of your smile stays healthy.",
             fullDesc: "Periodontal (gum) health is vital for whole-body wellness. Our gum care treatments range from deep cleaning (scaling and root planing) to laser treatments for gum disease, ensuring your gums remain pink, firm, and healthy supports for your teeth.",
-            image: "https://images.unsplash.com/photo-1600170311833-c2cf5280ce49?q=80&w=1000&auto=format&fit=crop",
+            image: "/images/services/gum-care.png",
             benefits: ["Prevents Tooth Loss", "Reduces Sensitivity", "Eliminates Bad Breath", "Systemic Health Benefits"]
         }
     ];

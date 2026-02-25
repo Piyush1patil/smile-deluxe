@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 import { MessageCircle } from 'lucide-react';
 
 export default function WhatsAppButton() {
-    const phoneNumber = "919022380091"; // Using the number from previous context or a placeholder if not known. User provided 9022380091 in history.
+    const phoneNumber = "918411861037"; // Updated per user request
     // Ideally, I should confirm the number, but I'll use the one from history 9022380091 with country code 91.
 
     const handleClick = () => {

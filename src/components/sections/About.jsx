@@ -21,7 +21,7 @@ export default function About() {
     ];
 
     return (
-        <section id="about" className="py-24 bg-background-light dark:bg-background-dark overflow-hidden">
+        <section id="about" className="py-24 bg-white dark:bg-neutral-900 overflow-hidden">
             <div className="container mx-auto px-4">
                 <div className="grid lg:grid-cols-2 gap-16 items-center">
 
@@ -34,7 +34,7 @@ export default function About() {
                     >
                         <div className="relative">
                             {/* Main Image */}
-                            <div className="rounded-[2.5rem] overflow-hidden shadow-2xl border-4 border-white dark:border-slate-800">
+                            <div className="rounded-[2.5rem] overflow-hidden shadow-2xl border-4 border-gold-100 dark:border-brown-800">
                                 <img
                                     src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?q=80&w=800&auto=format&fit=crop"
                                     alt="Modern Dental Clinic Interior"
@@ -42,14 +42,7 @@ export default function About() {
                                 />
                             </div>
 
-                            {/* Overlapping Image */}
-                            <div className="absolute -bottom-10 -right-10 w-2/3 rounded-2xl overflow-hidden shadow-2xl border-4 border-white dark:border-slate-800 hidden md:block">
-                                <img
-                                    src="https://images.unsplash.com/photo-1588776814546-1ffcf4722e12?q=80&w=600&auto=format&fit=crop"
-                                    alt="Dentist working"
-                                    className="w-full h-auto"
-                                />
-                            </div>
+
                         </div>
                     </motion.div>
 
@@ -60,22 +53,22 @@ export default function About() {
                         transition={{ duration: 0.8 }}
                         className="order-1 lg:order-2"
                     >
-                        <h2 className="text-3xl md:text-4xl font-bold font-sans text-secondary-dark dark:text-white mb-6">
-                            Experience the <span className="text-primary">BrightSmile</span> Difference
+                        <h2 className="text-3xl md:text-4xl font-bold font-playfair text-brown-900 dark:text-cream-100 mb-6">
+                            Experience the <span className="text-gold-500">BrightSmile</span> Difference
                         </h2>
-                        <p className="text-lg text-text-muted dark:text-slate-400 mb-8">
+                        <p className="text-lg text-brown-800/80 dark:text-cream-200/80 mb-8 font-inter">
                             We prioritize your comfort and dental health above all else. Our clinic is designed to provide a relaxing atmosphere where you can feel at ease.
                         </p>
 
                         <div className="space-y-8">
                             {features.map((feature, index) => (
                                 <div key={index} className="flex gap-4">
-                                    <div className="flex-shrink-0 w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+                                    <div className="flex-shrink-0 w-12 h-12 rounded-full bg-gold-100 dark:bg-gold-500/20 flex items-center justify-center text-gold-600 dark:text-gold-400">
                                         <feature.icon size={24} />
                                     </div>
                                     <div>
-                                        <h3 className="text-xl font-semibold text-secondary-dark dark:text-white mb-2">{feature.title}</h3>
-                                        <p className="text-text-muted dark:text-slate-400">{feature.description}</p>
+                                        <h3 className="text-xl font-semibold text-brown-900 dark:text-gold-100 mb-2 font-playfair">{feature.title}</h3>
+                                        <p className="text-brown-600 dark:text-cream-100 font-inter">{feature.description}</p>
                                     </div>
                                 </div>
                             ))}

@@ -22,7 +22,7 @@ const TestimonialCard = ({ name, role, text, delay }) => (
         </p>
 
         <div className="mt-auto">
-            <h4 className="font-bold text-gold-500 dark:text-gold-400 font-inter text-lg">{name}, <span className="text-gold-500/80">{role}</span></h4>
+            <h4 className="font-bold text-gold-500 dark:text-gold-400 font-inter text-lg">{name}, {role}</h4>
         </div>
     </motion.div>
 );
@@ -49,6 +49,11 @@ const Testimonials = () => {
     return (
         <section id="testimonials" className="py-24 bg-[#FFFBF0] dark:bg-neutral-800">
             <div className="container mx-auto px-4">
+                <div className="text-center mb-16">
+                    <h2 className="text-4xl md:text-5xl font-playfair font-bold text-gold-500 mb-6">
+                        Client Impressions
+                    </h2>
+                </div>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
                     {reviews.map((review, index) => (
                         <TestimonialCard key={index} {...review} delay={index * 0.1} />

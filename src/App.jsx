@@ -9,18 +9,20 @@ import Testimonials from "./components/sections/Testimonials";
 import Contact from "./components/sections/Contact";
 import About from "./components/sections/About";
 import WhatsAppButton from "./components/WhatsAppButton";
+import ChatbotButton from "./components/ChatbotButton";
 
 const Footer = () => (
   <footer className="bg-brown-900 text-cream-200 py-16 border-t border-gold-600/30">
     <div className="container mx-auto px-4 text-center">
       <h3 className="text-2xl font-playfair font-bold text-gold-500 mb-4">Smyluxe Dental</h3>
-      <p className="font-inter mb-8 opacity-70">Creating confident smiles with precision and care.</p>
+      <p className="font-inter mb-8 opacity-70">
+        Shop No. 203, Neo 95 Ravet, Pune, Pimpri-Chinchwad, Maharashtra 412101
+      </p>
       <div className="flex justify-center gap-6 mb-8 text-sm opacity-60 font-inter">
         <a href="#" className="hover:text-gold-400 transition-colors">Privacy Policy</a>
         <a href="#" className="hover:text-gold-400 transition-colors">Terms of Service</a>
-        <a href="#" className="hover:text-gold-400 transition-colors">Cookie Policy</a>
       </div>
-      <p className="text-sm opacity-50 font-inter">© 2024 Smyluxe Dental Studio. All rights reserved.</p>
+      <p className="text-sm opacity-50 font-inter">© 2024 Smyluxe Dental. All rights reserved.</p>
     </div>
   </footer>
 );
@@ -32,9 +34,8 @@ function App() {
         <Header />
         <main>
           <Hero />
-          <WhyChooseUs />
-          <Services />
           <HelpSection />
+          <Services />
           <Doctors />
           <About />
           <Testimonials />
@@ -42,6 +43,7 @@ function App() {
         </main>
         <Footer />
         <WhatsAppButton />
+        <ChatbotButton />
       </div>
     </ThemeProvider>
   );

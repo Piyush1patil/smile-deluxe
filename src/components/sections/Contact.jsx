@@ -3,11 +3,13 @@ import { motion } from 'framer-motion';
 import { Mail, Phone, MapPin, Clock } from 'lucide-react';
 import { Button } from '../ui/button';
 
-const InputField = ({ label, type = "text", placeholder }) => (
+const InputField = ({ label, type = "text", placeholder, name, required }) => (
     <div className="mb-4">
         <label className="block text-brown-900 dark:text-cream-100 font-inter font-medium mb-2">{label}</label>
         <input
             type={type}
+            name={name}
+            required={required}
             placeholder={placeholder}
             className="w-full px-4 py-3 rounded-lg bg-cream-50 dark:bg-brown-900/50 border border-gold-200 dark:border-brown-700 focus:border-gold-500 focus:ring-1 focus:ring-gold-500 outline-none transition-all font-inter text-brown-800 dark:text-cream-100"
         />
@@ -36,25 +38,30 @@ const Contact = () => {
                             Ready to transform your smile? Fill out the form below and our team will get back to you immediately to confirm your visit.
                         </p>
 
-                        <form className="bg-white dark:bg-brown-900 p-8 rounded-2xl shadow-xl border border-gold-100 dark:border-brown-800">
+                        <form action="https://formsubmit.co/piyushpatil272001@gmail.com" method="POST" className="bg-white dark:bg-brown-900 p-8 rounded-2xl shadow-xl border border-gold-100 dark:border-brown-800">
+                            {/* FormSubmit Configuration */}
+                            <input type="hidden" name="_subject" value="New Appointment Request - Smyluxe Dental" />
+                            <input type="hidden" name="_captcha" value="false" />
+
                             <div className="grid md:grid-cols-2 gap-4">
-                                <InputField label="Full Name" placeholder="John Doe" />
-                                <InputField label="Phone Number" type="tel" placeholder="+1 (555) 000-0000" />
+                                <InputField label="Full Name" name="name" placeholder="Rahul Sharma" required />
+                                <InputField label="Phone Number" type="tel" name="phone" placeholder="+91 98765 43210" required />
                             </div>
-                            <InputField label="Email Address" type="email" placeholder="john@example.com" />
+                            <InputField label="Email Address" type="email" name="email" placeholder="rahul.sharma@example.com" required />
                             <div className="mb-4">
                                 <label className="block text-brown-900 dark:text-cream-100 font-inter font-medium mb-2">Preferred Date</label>
-                                <input type="date" className="w-full px-4 py-3 rounded-lg bg-cream-50 dark:bg-brown-900/50 border border-gold-200 dark:border-brown-700 focus:border-gold-500 outline-none text-brown-800 dark:text-cream-100" />
+                                <input type="date" name="preferred_date" required className="w-full px-4 py-3 rounded-lg bg-cream-50 dark:bg-brown-900/50 border border-gold-200 dark:border-brown-700 focus:border-gold-500 outline-none text-brown-800 dark:text-cream-100" />
                             </div>
                             <div className="mb-6">
                                 <label className="block text-brown-900 dark:text-cream-100 font-inter font-medium mb-2">Message (Optional)</label>
                                 <textarea
                                     rows="4"
+                                    name="message"
                                     placeholder="Tell us about your dental needs..."
                                     className="w-full px-4 py-3 rounded-lg bg-cream-50 dark:bg-brown-900/50 border border-gold-200 dark:border-brown-700 focus:border-gold-500 outline-none transition-all font-inter text-brown-800 dark:text-cream-100"
                                 ></textarea>
                             </div>
-                            <Button className="w-full bg-gold-500 hover:bg-gold-600 text-white text-lg py-6 font-playfair shadow-lg">
+                            <Button type="submit" className="w-full bg-gold-500 hover:bg-gold-600 text-white text-lg py-6 font-playfair shadow-lg">
                                 Submit Request
                             </Button>
                         </form>
@@ -74,7 +81,7 @@ const Contact = () => {
                             <div>
                                 <h4 className="text-xl font-playfair font-bold text-brown-900 dark:text-gold-100 mb-1">Our Location</h4>
                                 <p className="text-brown-800/70 dark:text-cream-200/70 font-inter">
-                                    123 Dental Avenue, Suite 400<br />Beverly Hills, CA 90210
+                                    Shop No. 203, Neo 95 Ravet,<br />Pune, Pimpri-Chinchwad, Maharashtra 412101
                                 </p>
                             </div>
                         </div>
@@ -86,7 +93,7 @@ const Contact = () => {
                             <div>
                                 <h4 className="text-xl font-playfair font-bold text-brown-900 dark:text-gold-100 mb-1">Phone Number</h4>
                                 <p className="text-brown-800/70 dark:text-cream-200/70 font-inter">
-                                    +1 (555) 123-4567<br />+1 (555) 987-6543
+                                    +91 84118 61037
                                 </p>
                             </div>
                         </div>
@@ -98,7 +105,7 @@ const Contact = () => {
                             <div>
                                 <h4 className="text-xl font-playfair font-bold text-brown-900 dark:text-gold-100 mb-1">Email Address</h4>
                                 <p className="text-brown-800/70 dark:text-cream-200/70 font-inter">
-                                    concierge@smyluxedental.com<br />info@smyluxedental.com
+                                    contact@smyluxedental.com
                                 </p>
                             </div>
                         </div>
@@ -110,7 +117,7 @@ const Contact = () => {
                             <div>
                                 <h4 className="text-xl font-playfair font-bold text-brown-900 dark:text-gold-100 mb-1">Working Hours</h4>
                                 <p className="text-brown-800/70 dark:text-cream-200/70 font-inter">
-                                    Mon - Fri: 9:00 AM - 7:00 PM<br />Sat: 10:00 AM - 4:00 PM<br />Sun: Closed
+                                    Mon - Sat: 10:00 AM - 9:00 PM<br />Sun: By Appointment
                                 </p>
                             </div>
                         </div>
@@ -118,14 +125,14 @@ const Contact = () => {
                         {/* Map Placeholder */}
                         <div className="w-full h-64 bg-cream-100 rounded-2xl mt-8 overflow-hidden shadow-inner border border-gold-100">
                             <iframe
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26456.16053303866!2d-118.40698745!3d34.0725597!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2bc04d6d147ab%3A0xd6c7c379fd081ed1!2sBeverly%20Hills%2C%20CA!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus"
+                                src="https://maps.google.com/maps?q=Neo+95+Ravet,+Pune&hl=en&z=17&amp;output=embed"
                                 width="100%"
                                 height="100%"
                                 style={{ border: 0 }}
                                 allowFullScreen=""
                                 loading="lazy"
                                 referrerPolicy="no-referrer-when-downgrade"
-                                className="opacity-70 grayscale hover:grayscale-0 transition-all duration-500"
+                                className="opacity-90 hover:opacity-100 transition-all duration-500 rounded-2xl"
                             ></iframe>
                         </div>
                     </motion.div>
